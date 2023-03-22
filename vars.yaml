@@ -18,6 +18,6 @@
       ansible.builtin.debug:
         msg: "{{CMD_URL}}"
 
-    - name: printing the variables from file
+    - name: printing the variables from a file
       ansible.builtin.debug:
         msg: "{{GAME_LIVES}}"
