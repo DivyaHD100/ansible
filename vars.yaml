@@ -12,3 +12,8 @@
         msg: the value of url is {{URL}}
       vars:
         URL: task.google.com
+
+    - name: printing the url from CLI
+      ansible.builtin.debug:
+        msg: "{{CMD_URL}}""
+        
