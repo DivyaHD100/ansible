@@ -15,5 +15,4 @@
 
     - name: printing the url from CLI
       ansible.builtin.debug:
-        msg: "{{CMD_URL}}""
-        
+        msg: "{{CMD_URL}}"
