@@ -8,3 +8,14 @@
     - name: Print HELLO from Play1 of task2
       ansible.builtin.debug:
         msg: hello from task2 of Play1
+
+- name: Play2
+  hosts: all  #name of the onv group that you want this to be running against 
+  tasks: 
+    - name: Print HELLO from Play1
+      ansible.builtin.debug:
+        msg: hello from task1 of Play1
+    
+    - name: Print HELLO from Play1 of task2
+      ansible.builtin.debug:
+        msg: hello from task2 of Play1
