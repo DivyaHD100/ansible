@@ -20,4 +20,4 @@
 
     - name: printing the variables from file
       ansible.builtin.debug:
-        msg: "{{GAME_LIVES}}"
+        msg: "{{GAME_LIVES}}
