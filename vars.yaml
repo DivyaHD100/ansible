@@ -2,7 +2,7 @@
   hosts: all
   vars:
     URL: play.google.com
-  vars_file: demo-vars.yaml
+    vars_file: demo-vars.yaml
   tasks:
     - name: printing the url
       ansible.builtin.debug:
