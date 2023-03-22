@@ -4,7 +4,7 @@
     - name: execute this task if distribution is centos
       ansible.builtin.debug:
         msg: welcome to centos
-      when: ansible_distribution == "Centos"
+      when: ansible_distribution == "CentOS"
 
     - name: execute this task if distribution is ubuntu
       ansible.builtin.debug:
