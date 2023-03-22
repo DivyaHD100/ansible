@@ -3,7 +3,8 @@
   tasks:
     - name: check nginx is running or not 
       ansible.builtin.shell: ps -ef | grep nginx | grep -v grep
-       
+      ignore_errors: yes
+      
     - name: Starting nginx
       ansible.builtin.debug:
         msg: Starting Nginx service
