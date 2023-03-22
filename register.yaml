@@ -7,7 +7,12 @@
     
     - name: printing the uptime
       ansible.builtin.debug:
-        msg: the value of uptime is {{OUT}}
+        msg: the value of uptime is {{OUT.stdout}}
+
+    - name: print the exit code of uptime
+      ansible.builtin.set_fact: 
+      STATUS_OUT: "{{OUT.rc}}"
+      
 
     
 
