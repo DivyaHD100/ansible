@@ -1,0 +1,13 @@
+- name: demo on using shell module
+  hosts: all
+  tasks:
+    - name: printing the uptime using shell
+      ansible.builtin.shell: uptime
+      register: OUT
+    
+    - name: printing the uptime
+      ansible.builtin.debug:
+        msg: the value of uptime is {{OUT}}
+
+    
+
