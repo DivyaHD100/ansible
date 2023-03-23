@@ -1,0 +1,12 @@
+- name: demo on tags
+  hosts: all
+  tasks:
+    - name: this is frontend
+      ansible.builtin.debug:
+       msg: Installing frontend
+      tags: frontend
+
+    - name: this is redis
+      ansible.builtin.debug:
+       msg: Installing redis
+      tags: backend
