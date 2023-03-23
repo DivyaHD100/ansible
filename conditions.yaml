@@ -17,3 +17,8 @@
       ansible.builtin.debug:
         msg: Action is true
       when: action
+
+    - name: run this task when variable is declared 
+      ansible.builtin.debug:
+        msg: variable Action is decalred
+      when: action is defined
