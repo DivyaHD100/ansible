@@ -21,4 +21,4 @@
     - name: run this task when variable is declared 
       ansible.builtin.debug:
         msg: variable Action is decalred
-      when: action is defined
+      when: actions12 is defined
