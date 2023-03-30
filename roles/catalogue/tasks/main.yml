@@ -30,3 +30,20 @@
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}"
     remote_src: yes
+
+- name: Generating the node modules
+  community.general.npm:
+  path: /home/{{APPUSER}}/{{COMPONENT}}
+
+- name: Copying component Systemd file
+  ansible.builtin.copy:
+  src: systemd.service
+  dest: /etc/systemd/system/catalogue.service
+
+- name: Restarting the service
+  ansible.builtin.systemd:
+  state: restarted
+  daemon-reload: true
+  enabled: yes
+  name: catalogue
+
