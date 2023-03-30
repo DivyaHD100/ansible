@@ -25,11 +25,11 @@
 
 - name: Copying the roboshop to home directory
   ansible.builtin.copy:
-    src: /tmp/catalogue-main/
-    dest: /home/{{APPUSER}}/catalogue
-    owner: "{{APPUSER}}"
-    group: "{{APPUSER}}"
-    remote_src: yes
+      src: /tmp/catalogue-main/
+      dest: /home/{{APPUSER}}/catalogue
+      owner: "{{APPUSER}}"
+      group: "{{APPUSER}}"
+      remote_src: yes
 
 - name: Generating the node modules
   community.general.npm:
@@ -37,13 +37,13 @@
 
 - name: Copying component Systemd file
   ansible.builtin.copy:
-  src: systemd.service
-  dest: /etc/systemd/system/catalogue.service
+    src: systemd.service
+    dest: /etc/systemd/system/catalogue.service
 
 - name: Restarting the service
   ansible.builtin.systemd:
-  state: restarted
-  daemon-reload: true
-  enabled: yes
-  name: catalogue
+    state: restarted
+    daemon-reload: true
+    enabled: yes
+    name: catalogue
 
