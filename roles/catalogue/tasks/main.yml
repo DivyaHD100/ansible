@@ -33,7 +33,7 @@
 
 - name: Generating the node modules
   community.general.npm:
-  path: /home/{{APPUSER}}/{{COMPONENT}}
+    path: /home/{{APPUSER}}/{{COMPONENT}}
 
 - name: Copying component Systemd file
   ansible.builtin.copy:
