@@ -2,7 +2,7 @@
   ansible.builtin.user:
     name: "{{APPUSER}}" 
     comment: Roboshop User Account
-  register: APPUSERINFO
+    register: APPUSERINFO
 
 # - name: Debugging 
 #   ansible.builtin.debug:
