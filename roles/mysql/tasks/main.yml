@@ -18,9 +18,9 @@
   block: 
       - name: Get MySQL version with non-default credentials
         community.mysql.mysql_info:
-        login_user: root 
-        login_password: RoboShop@1
-        filter: version
+          login_user: root 
+          login_password: RoboShop@1
+          filter: version
 
   rescue:
 - name: Loading the file from the remote node
