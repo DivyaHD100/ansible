@@ -17,4 +17,6 @@
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}"
     remote_src: yes    
-  ignore_errors: yes 
+  ignore_errors: yes
+
+#ignore erros only for databases since user is not required,works for non DB's
