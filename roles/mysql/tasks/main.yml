@@ -5,8 +5,10 @@
 
 - name: Installing mysql community server
   ansible.builtin.package:
-    name: mysql-community-server
-    state: present
+    name: 
+      - mysql-community-server
+      - MySQL-python
+    state: installed
 
 - name: Starting mysqld
   ansible.builtin.service:
