@@ -21,6 +21,7 @@
         login_user: root 
         login_password: RoboShop@1
         filter: version
+        
   rescue:
 - name: Loading the file from the remote node
   ansible.builtin.slurp:
