@@ -13,7 +13,7 @@
 - name: Starting mysqld
   ansible.builtin.service:
     name: mysqld
-    state: started          
+    state: started         
     enabled: yes
 
 - name: Check the default password 
