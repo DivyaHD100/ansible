@@ -26,4 +26,4 @@ rabbitmq-dev.roboshop.internal
 mysql-dev.roboshop.internal
 
 [payment]
-payment-dev.roboshop.internal
+payment-dev.roboshop.intern
