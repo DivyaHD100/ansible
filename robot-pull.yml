@@ -4,6 +4,9 @@
   roles:
       - "{{COMPONENT}}"
 
-      #we can loc alhost whenever infrastructure is dynamic or cant maintain the inventory we will use ansible pull
-      # ansible pull is going to fetch playbook and will execute locally on top of the server and can do the configuration mgt on top of the same server and doesnt have to maintain THE SERVER WHICH IS RUNNING ROUND THE CLOCK,ensure ansible server is running round the CLOCK
+      #we can localhost whenever infrastructure is dynamic or cant maintain the inventory we will use ansible pull
+      
+      # ansible pull is going to fetch playbook and will execute locally on top of the server and can do the configuration mgt on top of the 
+      #same server and doesnt have to maintain THE SERVER WHICH IS RUNNING ROUND THE CLOCK,ensure ansible server is running round the CLOCK
+      
       # no need of ansible controller
