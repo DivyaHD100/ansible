@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'ws' }
+    agent any
 environment { 
     SSH_CREDENTIALS = credentials('SSH_CRED')
     }    
