@@ -26,7 +26,7 @@ stage('Performing Ansible Dry Run') {
         //when { branch pattern: "PR-.*", comparator: "REGEXP"}
             steps {
                 sh "env"
-                sh "ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=${SSH_CREDENTIALS_USR} -e ansible_password=${SSH_CREDENTIALS_PSW} -e ENV=qa"
+                sh ("ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=${SSH_CREDENTIALS_USR} -e ansible_password=${SSH_CREDENTIALS_PSW} -e ENV=qa")
             }
         }
 
