@@ -46,3 +46,6 @@ How do I know, what all are the facts that are collected by ANSIBLE ?
 * Ansible uses a module called as setup using that we can check the collected facts 
 
     $ ansible -i inventory all -m setup
+
+#ansible dry run command
+ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=centos -e ansible_password=DevOps321 -e ENV=qa
