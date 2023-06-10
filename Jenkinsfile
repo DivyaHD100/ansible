@@ -1,7 +1,7 @@
 pipeline {
-    agent any
+    agent { label 'ws' }
 environment { 
-    SSH_CREDENTIALS = credentials('SSH_CRED') 
+    SSH_CREDENTIALS = credentials('SSH_CRED')
     }    
     stages {
 
