@@ -13,14 +13,14 @@ environment {
 //             }
 //         }
     
-//         stage('Performing Lint Check') {
-//         when { branch pattern: "feature-.*", comparator: "REGEXP"}
-//             steps {
-//                 sh "env"
-//                 sh "echo This step should run against non-main branches only"
-//                 sh "echo PERFORMING LINT CHECKSS"
-//             }
-//         }
+        stage('Performing Lint Check') {
+        //when { branch pattern: "feature-.*", comparator: "REGEXP"}
+            steps {
+                sh "env"
+                sh "echo This step should run against non-main branches only"
+                sh "echo PERFORMING LINT CHECKSS"
+            }
+        }
 
 stage('Performing Ansible Dry Run') {    
         //when { branch pattern: "PR-.*", comparator: "REGEXP"}
