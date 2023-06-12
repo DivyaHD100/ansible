@@ -5,8 +5,8 @@ environment {
     }    
     stages {
 
-//         stage('Performing XYZ') {
-//             steps {
+//       stage('Performing XYZ') {
+//                  steps {
 //                 sh "echo Running On ${env.GIT_BRANCH} branch"
 //                 sh "echo Branch name is ${GIT_BRANCH}"
 //                 sh "echo Blah Blah Blah"
@@ -31,12 +31,12 @@ environment {
                 }
 
         stage('Promotion To Prod Branch') {       // This stage will run only against the main branch
-            //when { expression { env.TAG_NAME == ".*" } }
-            steps {
-                sh "env"
-                sh "echo printing"
-                sh "echo main - PROMOTING To PRODUCTION"
+                when { expression { env.TAG_NAME == ".*" } }
+                steps {
+                    sh "env"
+                    sh "echo printing"
+                    sh "echo main - PROMOTING To PRODUCTION"
+                }
             }
-        }
     }   
 }
