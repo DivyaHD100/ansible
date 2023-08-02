@@ -2,17 +2,23 @@
   ansible.builtin.package:
     name: nginx
     state: present
+# Uncomment this when you don't have nexus or when you wish to download that from the GitHub 
+# - name: Download and extract frontend 
+#   ansible.builtin.unarchive:
+#     src: https://github.com/stans-robot-project/frontend/archive/main.zip
+#     dest: /tmp 
+#     remote_src: yes
 
-- name: Download and extract frontend 
+# - name: Performing frontend cleanup 
+#   ansible.builtin.file:
+#     path: /usr/share/nginx/html
+#     state: absent
+
+- name: Download and extract from Nexus  
   ansible.builtin.unarchive:
-    src: https://github.com/stans-robot-project/frontend/archive/main.zip
-    dest: /tmp 
+    src: http://172.31.27.103:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{VERSION}}cd .zip
+    dest: /usr/share/nginx/html
     remote_src: yes
-
-- name: Performing frontend cleanup 
-  ansible.builtin.file:
-    path: /usr/share/nginx/html
-    state: absent
 
 - name: Copying frontend code
   ansible.builtin.copy:
