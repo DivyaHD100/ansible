@@ -9,14 +9,21 @@
     dest: /tmp 
     remote_src: yes
 
-- name: Performing frontend cleanup 
-  ansible.builtin.file:
-    path: /usr/share/nginx/html
-    state: absent
+# Uncomment this when you don't have nexus or when you wish to download that from the GitHub 
+# - name: Performing frontend cleanup 
+#   ansible.builtin.file:
+#     path: /usr/share/nginx/html
+#     state: absent 
 
-- name: Copying frontend code
-  ansible.builtin.copy:
-    src: /tmp/frontend-main/static/
+# - name: Copying frontend code
+#   ansible.builtin.copy:
+#     src: /tmp/frontend-main/static/
+#     dest: /usr/share/nginx/html
+#     remote_src: yes                    # This ensure your source to copy is on the remote machine  
+
+- name: Download and extract from Nexus  
+  ansible.builtin.unarchive:
+    src: http://172.31.27.103:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{VERSION}}.zip
     dest: /usr/share/nginx/html
     remote_src: yes
 
