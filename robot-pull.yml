@@ -1,8 +1,8 @@
-- name: Playbook to set up the roboshop project
+- name: Playbook to set up the roboshop project 
   become: yes
   hosts: localhost
-  roles:
-      - "{{COMPONENT}}"
+  roles: 
+    - "{{COMPONENT}}" 
 
       #we can localhost whenever infrastructure is dynamic or cant maintain the inventory we will use ansible pull
       
