@@ -19,7 +19,7 @@
   ansible.builtin.include_role:
     name: common 
     tasks_from: download-from-nexus
-    
+
 - name: Generating Artifacts
   ansible.builtin.shell: mvn clean package  &&  mv target/{{COMPONENT}}-1.0.jar {{COMPONENT}}.jar
   args:
